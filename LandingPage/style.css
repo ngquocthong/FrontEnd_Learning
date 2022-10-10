@@ -14,7 +14,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: url(bg.png)no-repeat;
+    background: url(./img/bg.png)no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -46,7 +46,7 @@ header .navigation a{
     padding: 2px 15px;
     border-radius: 20px;
     transition: 0.3;
-    transition-property: background;
+    transition-property: background;    
 }
 
 header .navigation a:not(:last-child) {
@@ -72,8 +72,8 @@ header .navigation a:hover {
     margin-bottom: 30px;
 }
 
-.conteent .info h2 span{
-    color: #fff;
+.content .info h2 span{
+    color: rgb(87, 84, 235);
     font-size: 50px;
     font-weight: 600;
 }
@@ -151,16 +151,17 @@ label {
     #check:checked ~ header .navigation{
         z-index: 2;
         position: fixed;
-        background-color: rgba(61, 86, 226, 0.9);
+        background: rgba(61, 86, 226, 0.9);
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center; 
+        justify-content: center;
+        align-items: center;
     }
-    #check:checked checked ~ header .navigation a{
+    #check:checked  ~ header .navigation a{
         font-weight: 700;
         margin-right: 0;
         margin-bottom: 50px;
@@ -184,10 +185,11 @@ label {
         bottom: 6px;
     }
 
-#check{
-    z-index: 3;
-    display: none;
-}    
+    #check{
+        z-index: 3;
+        display: none;
+    } 
+}  
 @media (max-width: 560px) {
     .content .info h2{
         font-size: 35px;
